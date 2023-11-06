@@ -171,6 +171,16 @@ img[data-reduced-motion] {
   .menu-toggle.active + ul {
     display: block;
   }
+  .recipes {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+  
+  .recipe {
+    flex: 1; 
+    min-width: 300px;
+    margin: 10px;
+  }
 @media only screen and (min-width: 768px) {
     .skip{
         visibility:visible;;
