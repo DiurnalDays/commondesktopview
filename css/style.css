@@ -146,11 +146,31 @@ img[data-reduced-motion] {
       display: block;
     }
   }
-  @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px){
     .skip{
         visibility:visible;;
     }
 }
+
+@media (max-width: 768px) {
+    nav ul {
+      display: none; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  .menu-toggle {
+    cursor: pointer;   
+  }
+  
+  .menu-toggle.active + ul {
+    display: block;
+  }
 @media only screen and (min-width: 768px) {
     .skip{
         visibility:visible;;
