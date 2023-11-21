@@ -13,10 +13,10 @@ nav{
     margin:10px;
 }
 .skip{
-  visibility:hidden;;
+  visibility:hidden;
 }
 .skip:focus{
-  visibility:visible;;
+  visibility:visible;
 }
 .container {
     display: grid;
