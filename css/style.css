@@ -9,7 +9,13 @@ nav{
     margin:10px;
 }
 .skip { 
-    display: none;
+    display: hidden;
+}
+.skip{
+  visibility:hidden;;
+}
+.skip:focus{
+  visibility:visible;;
 }
 .container {
     display: grid;
@@ -147,9 +153,11 @@ img[data-reduced-motion] {
     }
   }
 @media only screen and (min-width: 600px){
-    .skip{
-        visibility:visible;;
-    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+      }
 }
 
 @media (max-width: 768px) {
