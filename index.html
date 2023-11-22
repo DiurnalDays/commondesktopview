@@ -180,84 +180,29 @@
         </div>
         </div>
     </main>
-      <div class="popup">
-          <div class="popup-box">
-            <h2>SUBSCRIBE TO MY NEWSLETTER</h2>
-            <p>Subscribe to my newsletter and receive new pictures of pets, recipes, and destinations on a weekly basis!.</p>
-            <a class="close-button popup-close" href="#">x</a><div class="form-group">
-            <form method="post">
-              <label for="useremail-id">Email:</label>
-              <input type="email" id="useremail-id" name="useremail-id" required placeholder="Please Enter your email">
-              <button type="submit" id="subscribe">SUBSCRIBE</button>
-            </form>
-          </div>
-          </div>
+    <div id="mailing-popup" class="popup">
+        <div class="popup-content">
+          <h2>Join Our Mailing List</h2> 
+          <p>Sign up to receive new pictures every week:</p>
+          <form>
+            <input type="email" placeholder="Enter email">
+            <button>Subscribe</button>
+          </form>
+          
+          <button id="close-btn">X</button>
         </div>
+      </div>
     <!--Robin Jiao-->
     <script>
-const popup = document.querySelector('.popup');
-const wrapper = document.querySelector('.wrapper');
-const box = document.querySelector('.popup-box');
+let popup = document.getElementById("mailing-popup");
+let close = document.getElementById("close-btn");
 
-document.querySelector('.popup-button').addEventListener('click', () => {
+setTimeout(() => {
+  popup.style.display = "flex";
+}, 2000);
 
-  popup.style.display = 'block';
-  wrapper.style.display = 'block';
-
-  box.classList.remove('transform-out');
-  box.classList.add('transform-in');
-
-});
-
-document.querySelector('.popup-close').addEventListener('click', () => {
-
-  popup.style.display = 'none';
-  wrapper.style.display = 'none';
-  
-  box.classList.remove('transform-in'); 
-  box.classList.add('transform-out');
-  
-});
-
-
-function bodyScrollToggle() {
-  document.body.classList.toggle('stop-scrolling');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  const popupButton = document.querySelector('.popup-button');
-  const popupClose = document.querySelector('.popup-close');
-
-  popupButton.addEventListener('click', () => {
-    bodyScrollToggle(); 
-  });
-
-  popupClose.addEventListener('click', () => {
-    bodyScrollToggle();
-  })  
-
-});
-    </script>
-    <script>
-    document.querySelector('jsuites-rating').addEventListener('onchange', function(e) {
-        document.getElementById('console').innerHTML = 'Rating of the website on tablet view: ' + this.value;
-    });
-    $(document).ready(function() {
-    $('.wrapper').fadeIn(500);
-    $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-    $('.popup-button').click(function(e) {
-        $('.wrapper').fadeOut(500);
-        $('.popup-box').removeClass('transform-in').addClass('transform-out');
-        e.preventDefault();
-    });
-
-    $('.popup-close').click(function(e) {
-        $('.wrapper').fadeOut(500);
-        $('.popup-box').removeClass('transform-in').addClass('transform-out');
-        e.preventDefault();
-    });
+close.addEventListener('click', () => {
+  popup.style.display = "none"; 
 });
     </script>
     <script src="https://jsuites.net/v4/jsuites.js"></script>
