@@ -208,9 +208,16 @@ close.addEventListener('click', () => {
     <script src="https://jsuites.net/v4/jsuites.js"></script>
     <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
     <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css">
-     
-    <jsuites-rating value="4" tooltip="Ugly, Bad, Average, Good, Outstanding"></jsuites-rating>
-     
+    
+    <jsuites-rating id="rating" value="4" tooltip="Ugly, Bad, Average, Good, Outstanding"></jsuites-rating>
+    
     <div id='console'></div>
+    
+    <script>
+    document.getElementById('rating').addEventListener('change', function(e) {
+        document.getElementById('console').innerHTML = 'You rated: ' + this.value;
+    });
+    </script>
+    
 </body>
 </html>
