@@ -195,18 +195,49 @@
         </div>
     <!--Robin Jiao-->
     <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('nav ul');
+const popup = document.querySelector('.popup');
+const wrapper = document.querySelector('.wrapper');
+const box = document.querySelector('.popup-box');
 
-    setTimeout(() => {
-    toggle.classList.toggle('active'); 
-    menu.classList.toggle('active');
-    }, 2000);
+document.querySelector('.popup-button').addEventListener('click', () => {
 
-    toggle.addEventListener('load', () => {
-    toggle.classList.toggle('active');
-    menu.classList.toggle('active');   
-    }); 
+  popup.style.display = 'block';
+  wrapper.style.display = 'block';
+
+  box.classList.remove('transform-out');
+  box.classList.add('transform-in');
+
+});
+
+document.querySelector('.popup-close').addEventListener('click', () => {
+
+  popup.style.display = 'none';
+  wrapper.style.display = 'none';
+  
+  box.classList.remove('transform-in'); 
+  box.classList.add('transform-out');
+  
+});
+
+
+function bodyScrollToggle() {
+  document.body.classList.toggle('stop-scrolling');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const popupButton = document.querySelector('.popup-button');
+  const popupClose = document.querySelector('.popup-close');
+
+  popupButton.addEventListener('click', () => {
+    bodyScrollToggle(); 
+  });
+
+  popupClose.addEventListener('click', () => {
+    bodyScrollToggle();
+  })  
+
+});
     </script>
     <script src="https://jsuites.net/v4/jsuites.js"></script>
     <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
