@@ -162,9 +162,6 @@ img[data-reduced-motion] {
     grid-auto-rows: 150px;  
   }
   
-  .container > *:nth-child(odd) {
-    height: 300px;
-  }
   
 }
 
