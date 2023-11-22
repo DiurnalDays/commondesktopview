@@ -106,6 +106,7 @@ a{text-decoration: underline;
 border: solid black}
 #skip{text-transform:uppercase}
 p{
+    color:black;
     text-align:center;
     margin:10px;
 }
