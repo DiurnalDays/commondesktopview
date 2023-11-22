@@ -213,49 +213,66 @@ img[data-reduced-motion] {
     min-width: 300px;
     margin: 10px; 
   }
-@media only screen and (min-width: 768px) {
-    .skip{
-        visibility:visible;;
+  @media only screen and (min-width: 768px) {
+
+    .skip {
+      visibility: visible;
     }
+  
     .container {
-      display: grid;
+      display: grid;  
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
-  }
-    .popup{
+    }
+  
+    .popup {
       display: none;
-      position: fixed;
-      body {
-        font-family: "Open Sans";
-        line-height: 200%;
-        background: #7b78ff;
-      }
-      #subscribe{background:#ddd;padding:15px 30px 15px 30px;margin:10px;border:none;cursor:pointer;border-radius:10px;}
-      input {
-        width: 100%;
-        height: 55px;
-        background-color: #eee;
-        border: none;
-        padding-left: 15px;
-        outline: none;
-        font-weight: 600;
-        position: relative;
-        border-radius:10px;
-      }
-      .container {
-        width: 800px;
-        margin: 10px auto;
-        text-align: center;
-      }
-      
-      h2 {
-        margin-bottom: 20px;
-        font-size: 32px;  color:#fff !important;
-      }
-      
-      h3 {
-        font-size: 16px;  color:#fff;
-      }
+      position: fixed; 
+    }
+  
+    .popup body {
+      font-family: "Open Sans";
+      line-height: 200%;
+      background: #7b78ff;
+    }
+  
+    .popup #subscribe {
+      background: #ddd;
+      padding: 15px 30px 15px 30px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  
+    .popup input {
+      width: 100%;
+      height: 55px;
+      background-color: #eee;
+      border: none;
+      padding-left: 15px;
+      outline: none;
+      font-weight: 600;
+      position: relative;
+      border-radius: 10px;
+    }
+  
+    .popup .container {
+      width: 800px;
+      margin: 10px auto;
+      text-align: center; 
+    }
+  
+    .popup h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #fff !important;
+    }
+  
+    .popup h3 {
+      font-size: 16px;
+      color: #fff;
+    }
       
       p {
         font-size: 16px;
@@ -324,23 +341,23 @@ img[data-reduced-motion] {
         text-decoration: none;
         color: #fff;
         line-height: 190%;
-      }
-      .popup-box .close-button:hover {
+        }
+        .popup-box .close-button:hover {
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
-      }
-      .transform-in, .transform-out {
+        }
+        .transform-in, .transform-out {
         display: block;
         -webkit-transition: all ease 0.5s;
         transition: all ease 0.5s;
-      }
-      .transform-in {
+        }
+        .transform-in {
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
-      }
-      .transform-out {
+        }
+        .transform-out {
         -webkit-transform: translate(-50%, -50%) scale(0.5);
         transform: translate(-50%, -50%) scale(0.5);
-      }
+        }
     }
 }
