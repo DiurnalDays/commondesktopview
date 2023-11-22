@@ -247,8 +247,26 @@ img[data-reduced-motion] {
       border-radius: 10px;
       text-align: center;
     }
-    
-    /* Close Button */ 
+    .popup-content input[type="email"] {
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 10px 0;
+      width: 100%;
+      outline: none;
+      box-sizing: border-box;  
+    }
+    .popup-content button { 
+      padding: 12px 25px;
+      background: #3c7dff;
+      color: white;   
+      border-radius: 4px;
+      margin-left: 10px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
     #close-btn {
       font-size: 20px;
       background: #222;
